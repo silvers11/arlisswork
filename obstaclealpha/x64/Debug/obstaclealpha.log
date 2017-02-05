@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\steven\documents\school\cs\arlisswork\obstaclealpha\source.cpp(42): warning C4101: 'k': unreferenced local variable
+  obstaclealpha.vcxproj -> C:\Users\Steven\Documents\school\CS\arlisswork\x64\Debug\obstaclealpha.exe
+  obstaclealpha.vcxproj -> C:\Users\Steven\Documents\school\CS\arlisswork\x64\Debug\obstaclealpha.pdb (Partial PDB)
