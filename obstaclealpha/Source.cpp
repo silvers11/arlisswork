@@ -9,7 +9,12 @@ const int Width = 30;
 const int Height = 30;
 
 
-
+/*
+# The Analyze function is the heart of the obstacle avoidance module. this function takes in our image array, and then checks which
+# of the three columns (left, center, or right) has the fewest edges and then decides which direction to go based off that data.
+#
+#
+*/
 void Analyze(int(Array)[][Height], int rows, int cols) {
 
 	//prints the array
