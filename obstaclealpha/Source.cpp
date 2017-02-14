@@ -2,11 +2,11 @@
 
 #include <string>
 #include <stdio.h>
-
+#include <time.h>
 #include <iostream>
 #include <fstream>
-const int Width = 25;
-const int Height = 25;
+const int Width = 30;
+const int Height = 30;
 
 
 
@@ -20,8 +20,33 @@ void Analyze(int(Array)[][Height], int rows, int cols) {
 			std::cout << Array[x][y] << " ";
 		}
 	}
+	int suml = 0, sumc = 0, sumr = 0;
+	//sum left column 
+	for (int x = 0; x < 10; x++){
+		for (int y = 0; y < rows; y++) {
+			suml += Array[y][x];
+		}
+	}
 
+	std::cout << std::endl << "sum of left section:" << suml << std::endl;
 
+	//sum center column 
+	for (int x = 10; x < 20; x++) {
+		for (int y = 0; y < rows; y++) {
+			sumc += Array[y][x];
+		}
+	}
+
+	std::cout << std::endl << "sum of center section:" << sumc << std::endl;
+
+	//sum right column 
+	for (int x = 20; x < 30; x++) {
+		for (int y = 0; y < rows; y++) {
+			sumr += Array[y][x];
+		}
+	}
+
+	std::cout << std::endl << "sum of right section:" << sumr << std::endl;
 
 	return;
 }
@@ -31,7 +56,7 @@ void main() {
 	//open file
 	
 	std::ifstream infile;
-
+	srand(time(NULL));
 
 	infile.open("test.txt");
 	if (infile.is_open()) {
@@ -54,8 +79,14 @@ void main() {
 	for (int x = 0; x < Width; x++)
 
 		for (int y = 0; y < Height; y++) {
-
-			Image_Array[x][y] = x;
+			float f = ((float)rand() / (RAND_MAX));
+			int j;
+			if (f > .85) {
+				j = 1;
+			}
+			else
+				j = 0;
+			Image_Array[x][y] = j;
 		}
 
 
