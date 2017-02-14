@@ -48,6 +48,17 @@ void Analyze(int(Array)[][Height], int rows, int cols) {
 
 	std::cout << std::endl << "sum of right section:" << sumr << std::endl;
 
+	//compare results, choose direction
+
+	if (sumc > (suml + 3) && suml <= sumr) {
+		std::cout << "Turn left." << std::endl;
+	}
+	else if (sumc > (sumr + 3) && sumr < suml) {
+		std::cout << "Turn right." << std::endl;
+	}
+	else
+		std::cout << "Continue forward." << std::endl;
+
 	return;
 }
 
