@@ -1,0 +1,12 @@
+[X]briefly recaps the project purposes and goals
+[]describes where you are currently on the project
+[]describes any problems that have impeded your progress, with any solutions you have
+[]includes particularly interesting pieces of code (if coding is involved)
+[]retrospective of the past 10 weeks
+[](research only) includes descriptions of preliminary results
+[]includes description of first user study, hopefully with results (as necessary)
+[]includes images of your project -- screen shots, photos, whatever is appropriate
+
+[]the special role you believe each member, including yourself, has played on the team (e.g., manager, technical expert, etc.),
+[]the level of contribution (e.g., higher/lower than, equal to, different from) for each member, including yourself, and
+[]how well you believe your group functions as a development team.

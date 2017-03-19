@@ -26,13 +26,13 @@
 \begin{document}
 \begin{titlepage}
 	\title{The ARLISS Project\\Progress Report\\Senior Capstone}
-	\author{Steven Silvers, Paul Minner, Zhaolong Wu, Zachary DeVita\\
-		Capstone Group 27\\2016-17 Academic Year}
+	\author{Steven Silvers\\
+		Capstone Group 27\\Winter Term}
 	\date{\today}
 	\maketitle
 	\vspace{4cm}
 	\begin{abstract}
-		\noindent This document details our experiences designing our project over the duration of the academic year. This includes progress made, problems encountered, and plans for the future. We also detail changes we plan to implement in the future.
+		\noindent This document details Steven's experience working on the ARLISS Project during the winter term of 2017. This includes progress made, problems encountered and plans to address those problems as well as plans for future development of the project.
 	\end{abstract}
 
 \end{titlepage}
@@ -41,27 +41,9 @@
 
 \section{Introduction}
 \par
-This document details the progress made by our team on the ARLISS Project over the course of winter term. The goal of this project is to work with a team of mechanical engineers and a team of electrical engineers to design and build a miniature rover that will be Oregon State University's entry into the annual ARLISS competition held in September. As part of the competition, the rover must be able to be deployed from a rocket at 10,000 feet AGL, land safely on the ground, unpack from any holding canister, lock on and autonomously drive to a finish destination at a set of provided GPS coordinates. Along the way the rover may encounter various obstacles that it will need to identify and avoid such as rocks or tire ruts.
+This document covers the progress made by our team on the ARLISS Project over the course of winter term. The goal of this project is to work with a team of mechanical engineers and a team of electrical engineers to design and build a miniature rover that will be Oregon State University's entry into the annual ARLISS competition held in September. As part of the competition, the rover must be able to be deployed from a rocket at 10,000 feet AGL, land safely on the ground, unpack from any holding canister, lock on and autonomously drive to a finish destination at a set of provided GPS coordinates. Along the way the rover may encounter various obstacles that it will need to identify and avoid such as rocks or tire ruts.
 
-\section{A Reflection of Development Period}
-\begin{tabular}{ |p{0.3\linewidth}|p{0.3\linewidth}|p{0.3\linewidth}|  }
-\hline
-\multicolumn{3}{|c|}{Retrospective} \\
-\hline
-Positives& Deltas &Actions \\
-\hline
-Our group works well together. &
-Better understand version control.&
-Each group member will research Github and version control in general. \\
 
-All software components seem possible to implement. &
-Better implement version control &
-Start submitting changes to Github via Pull Request instead of Pushes. \\
-
-The Mechanical Engineering team is very organized and handles the details for the competition. &
-Keep track of project progress better. & Use a separate application to keep track of progress, such as waffle.io.  \\
-\hline
-\end{tabular}
 
 
 \section{Summary of Winter Term}
@@ -89,46 +71,67 @@ Week five was spent doing work on the alpha version of the modules I am responsi
 \subsection{Week 6}
 Week six was focused entirely on the upcoming alpha release and progress report. We decided that each team member would write their pieces individually and then combine them into one document Thursday, giving us plenty of time to submit the report on Friday. We got together with the ECE and ME teams for our weekly meeting, which ended early because all three groups were busy with progress reports and had nothing of significance to share. The ME team is uncertain of their capstone number, which hopefully they will figure out soon so that we can register as a group for Expo. The ME team also revealed to us during the short meeting that the rover frame did not hold up in testing and broke. They are now considering manufacturing the frame to the rover out of acrylic as it is a sturdy lightweight material that they believe will be easier to work with.
 
+\section{Modules I Am Responsible For}
+
 \subsection{Control Board}
 Progress for the control board module so far consists of coming together with the ECE and ME teams and selecting what board we would like to use for the project. At our first all group meeting we decided that a Raspberry Pi Zero would be the best fit for our project given the size constraints and the processing power needed by our imaging system. Once that decision was made, it was a matter of placing the order for the Pi Zero boards and updating the technology review and the design document to reflect the decision to use the Pi Zero.
-\begin{figure}
+\par
+The Pi boards arrived shortly after the alpha version was turned in, the ECE team took two to work on building the electronics systems for the rovers while the CS team took one for testing our modules with. Paul held on to the board as he took up the task of doing most of the initial testing on it as well as installing Opencv and the Pi camera. At this point we are waiting on the ECE team to finish installing various sensors on the boards so that we can do testing with live data instead of just random testing with simulated values. We ran into a couple problems with the boards, namely we broke a camera port on one while trying to install the Pi camera. This problem was fixed by ordering a replacement board which arrived within the week. Another problem is that during weeks 9 and 10 the ECE group stopped communicating with either the CS or ME groups about progress and also stopped attending scheduled meetings and build days. This kept us in the dark about the progress of the hardware install on the ECE Pi boards for multiple weeks, and we eventually ended up getting in contact with our client Dr. Squires about the problem, who was able to reach one group member.
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale = .4]{Capture.PNG}
 	\caption{SolidWorks design of the rover}
-	\label{fig:rover}
+	\label{fig:design}
 \end{figure}
 \subsection{Wheel System}
-The wheel system for our rover will be designed and manufactured by our project's ME team here at Oregon State. As shown in figure \ref{fig:rover}, our wheel system is a caterpillar track featuring three wheels per track, one of which is connected to a motor while the other two are for stabilization and guidance. Currently only the design for the wheel system has been created, the wheel system should be produced and ready for testing by the beta release.
+The wheel system for our rover will be designed and manufactured by our project's ME team here at Oregon State. As shown in figure \ref{fig:design}, our wheel system is a caterpillar track featuring three wheels per track, one of which is connected to a motor while the other two are for stabilization and guidance. Figure \ref{fig:rover} is the finished implementation of the wheel system for our rover, this photo was taken during our week 10 all team meeting. The wheel system was the last piece to get finished for the mechanical team apart from installing electronics, as they had to re-cut the caterpillar track to get a better fit. At this point it is safe to say that the wheel system module is complete and requires no further changes or development.
 
-
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = .05]{builtrover.jpg}
+	\caption{Final wheel system}
+	\label{fig:rover}
+\end{figure}
 \subsection{Obstacle Avoidance}
-The obstacle avoidance system is what took up most of my time so far this term, as it is proving to be one of the trickier modules. I spent part of winter break as well as the first few weeks of winter term just focused on research for how to best implement a solution to this problem. The current plan is to take in a 2D binary array as input where ones represent edges detected in an image, and zeros are unchanging terrain.
-\begin{figure}
+The obstacle avoidance system is what took up most of my time so far this term, as it is proving to be one of the trickier modules. I spent part of winter break as well as the first few weeks of winter term just focused on research for how to best implement a solution to this problem. The initial plan was to take in a 2D binary array as input from the imaging module developed by Zach where ones represent edges detected in an image, and zeros are unchanging terrain.
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale = .75]{obstacleavoidance.png}
-	\caption{current output from alpha version}
+	\caption{output from alpha version}
 	\label{fig:obstacle}
 \end{figure}
 \par
-The obstacle avoidance algorithm splits the array into three large columns, left, center and right, and then sums those columns. This summation tells us where the most edges are, which translates to where the roughest terrain is. In figure \ref{fig:obstacle} it shows that the sum of the right column was the lowest, so the rover should turn right to avoid the rougher terrain in front of it and to the left. For testing purposes, the array used in the alpha release is randomly populated with ones and zeros. The current plan is for the beta version to be tested with actual images to ensure accuracy and logical correctness of the algorithm.
+The original obstacle avoidance algorithm would splits the array into three large columns, left, center and right, and then sums those columns. This summation tells us where the most edges are, which translates to where the roughest terrain is. In figure \ref{fig:obstacle} it shows that the sum of the right column was the lowest, so the rover should turn right to avoid the rougher terrain in front of it and to the left. For testing purposes, the array used in the alpha release is randomly populated with ones and zeros. The current plan is for the beta version to be tested with actual images to ensure accuracy and logical correctness of the algorithm.
 
+\section{A Reflection of Development Period}
+\begin{tabular}{ |p{0.3\linewidth}|p{0.3\linewidth}|p{0.3\linewidth}|  }
+	\hline
+	\multicolumn{3}{|c|}{Retrospective} \\
+	\hline
+	Positives& Deltas &Actions \\
+	\hline
+	Our group works well together. &
+	Better understand version control.&
+	Each group member will research Github and version control in general. \\
+	
+	All software components seem possible to implement. &
+	Better implement version control &
+	Start submitting changes to Github via Pull Request instead of Pushes. \\
+	
+	The Mechanical Engineering team is very organized and handles the details for the competition. &
+	Keep track of project progress better. & Use a separate application to keep track of progress, such as waffle.io.  \\
+	\hline
+\end{tabular}
 
+\section{Summary of Winter Term Progress}
 
+\section{Team Review}
+
+\section{Conclusion}
 
 \clearpage
 
 \pagenumbering{gobble}
 \vspace{1in}
-\noindent \namesigdate{\textbf{Steven Silvers}}
-\hfill
-\vspace{1in}
-\noindent \namesigdate{\textbf{Zhaolong Wu}}
-\\
-\vspace{1in}
-\noindent \namesigdate{\textbf{Paul Minner}}
-\hfill
-\vspace{1in}
-\noindent \namesigdate{\textbf{Zachary DeVita}}
-\\
-\noindent \namesigdate{\textbf{Nancy Squires}}
+
 \end{document}
