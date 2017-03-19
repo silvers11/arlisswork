@@ -11,7 +11,7 @@
 \contentsline {subsection}{\relax Control Board}{3}{section*.9}
 \contentsline {subsection}{\relax Wheel System}{4}{section*.11}
 \contentsline {subsection}{\relax Obstacle Avoidance}{4}{section*.13}
-\contentsline {section}{\numberline {IV}A Reflection of Development Period}{5}{section.4}
-\contentsline {section}{\numberline {V}Summary of Winter Term Progress}{5}{section.5}
-\contentsline {section}{\numberline {VI}Team Review}{5}{section.6}
-\contentsline {section}{\numberline {VII}Conclusion}{5}{section.7}
+\contentsline {section}{\numberline {IV}A Reflection of Development Period}{6}{section.4}
+\contentsline {section}{\numberline {V}Summary of Winter Term Progress}{6}{section.5}
+\contentsline {section}{\numberline {VI}Team Review}{6}{section.6}
+\contentsline {section}{\numberline {VII}Conclusion}{6}{section.7}
