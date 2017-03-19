@@ -1,5 +1,4 @@
 ﻿  Source.cpp
-c:\users\steven\documents\school\cs\arlisswork\obstaclealpha\source.cpp(70): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\steven\documents\school\cs\arlisswork\obstaclealpha\source.cpp(78): warning C4101: 'k': unreferenced local variable
+c:\users\steven\documents\school\cs\arlisswork\obstaclealpha\source.cpp(75): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   obstaclealpha.vcxproj -> C:\Users\Steven\Documents\school\CS\arlisswork\x64\Debug\obstaclealpha.exe
   obstaclealpha.vcxproj -> C:\Users\Steven\Documents\school\CS\arlisswork\x64\Debug\obstaclealpha.pdb (Partial PDB)
