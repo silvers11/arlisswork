@@ -5,7 +5,7 @@
 [X]retrospective of the past 10 weeks
 [X]includes images of your project -- screen shots, photos, whatever is appropriate
 
-[]the special role you believe each member, including yourself, has played on the team (e.g., manager, technical expert, etc.),
-[]the level of contribution (e.g., higher/lower than, equal to, different from) for each member, including yourself, and
-[]how well you believe your group functions as a development team.
+[X]the special role you believe each member, including yourself, has played on the team (e.g., manager, technical expert, etc.),
+[X]the level of contribution (e.g., higher/lower than, equal to, different from) for each member, including yourself, and
+[X]how well you believe your group functions as a development team.
 

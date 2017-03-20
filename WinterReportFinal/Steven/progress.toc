@@ -14,6 +14,11 @@
 \contentsline {subsection}{\relax Control Board}{4}{section*.12}
 \contentsline {subsection}{\relax Wheel System}{5}{section*.14}
 \contentsline {subsection}{\relax Obstacle Avoidance}{5}{section*.16}
-\contentsline {section}{\numberline {IV}A Reflection of Development Period}{7}{section.4}
-\contentsline {section}{\numberline {V}Team Review}{7}{section.5}
-\contentsline {section}{\numberline {VI}Conclusion}{7}{section.6}
+\contentsline {section}{\numberline {IV}A Reflection of Development Period}{8}{section.4}
+\contentsline {section}{\numberline {V}Team Review}{8}{section.5}
+\contentsline {subsection}{\relax Paul Minner}{8}{section*.19}
+\contentsline {subsection}{\relax Zhaolong Wu}{8}{section*.20}
+\contentsline {subsection}{\relax Zachary DeVita}{8}{section*.21}
+\contentsline {subsection}{\relax Steven Silvers}{9}{section*.22}
+\contentsline {subsection}{\relax Team as a Whole}{9}{section*.23}
+\contentsline {section}{\numberline {VI}Conclusion}{9}{section.6}
