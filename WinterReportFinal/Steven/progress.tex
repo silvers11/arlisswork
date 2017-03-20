@@ -46,11 +46,8 @@ This document covers the progress made by our team on the ARLISS Project over th
 
 
 
-\section{Summary of Winter Term}
+\section{Weekly Summary of Winter Term}
 
-
-\subsection{Steven Silvers}
-This section details the progress made by team member Steven Silvers during the first half of winter term  as well as any work done over winter break. Steven is responsible for making sure the control board for our project will provide what we need, and for determining what kind of wheel system our rover will use. The biggest piece that Steven is responsible for is the obstacle avoidance module, which is the main tool used by our autonomous driving system to keep our rover from becoming stuck during the competition.
 
 \subsection{Week 1}
 Start of winter term, over break I studied various autonomous driving methods since that is the main part of the project I am responsible for. I also looked at different hardware implementations and how they would possibly effect our programming decisions. We are communicating with the rest of the ARLISS capstone team to find a weekly meeting time, and have set our weekly TA meeting for Tuesdays at 1:30pm. Hopefully our whole team meeting time will be set soon so the ECE and ME teams can update us on their progress.
@@ -70,6 +67,21 @@ Week five was spent doing work on the alpha version of the modules I am responsi
 
 \subsection{Week 6}
 Week six was focused entirely on the upcoming alpha release and progress report. We decided that each team member would write their pieces individually and then combine them into one document Thursday, giving us plenty of time to submit the report on Friday. We got together with the ECE and ME teams for our weekly meeting, which ended early because all three groups were busy with progress reports and had nothing of significance to share. The ME team is uncertain of their capstone number, which hopefully they will figure out soon so that we can register as a group for Expo. The ME team also revealed to us during the short meeting that the rover frame did not hold up in testing and broke. They are now considering manufacturing the frame to the rover out of acrylic as it is a sturdy lightweight material that they believe will be easier to work with.
+
+\subsection{Week 7}
+Week seven I took a little bit of time to catch my breath and recover from being sick after a stressful week six. We are still waiting on the ME and ECE teams to figure out their capstone group numbers so that we can register for expo. The plan for week eight is to begin integrating our individual modules into a single system and to begin testing our system on the Raspberry Pi Zero.
+
+\subsection{Week 8}
+I spent most of this week attempting to merge my obstacle avoidance module with Zach's imaging module, with little to no success. I think what could be causing the problem is Zach and I may have OpenCV configured in different ways on our workstations, which is preventing me from properly compiling his source without making major changes. I will be sure to discuss with him in the coming days to see what we can do to fix this problem. Parts are still coming in for the ECE team, at the previous group meeting the servos had finally arrived that will be used for unpacking the rover from the payload once it lands. The ME team has a frame cut from acrylic, but is not yet assembled and last I heard from them they had not started on the wheel system yet. The plan currently is to have all of our modules working in a single system by the end of the term, and whether or not that gets implemented on hardware is Dependant on the progress made by the ECE and ME teams in the coming weeks.
+
+\subsection{Week 9}
+I made quite a bit of progress this week, I managed to successfully install Opencv on Linux, port Zach's imaging module so that it would run on Linux and not just from Visual Studio. I also added functionality so that it outputs a .csv file that I can easily open and use with my obstacle avoidance module. The .csv file contains values of zero where there is empty space(safe to drive) and nonzero and sometimes non integer values where there are edges. I just need to make a few edits to my module that allows it to adapt to the size of the .csv file, read any nonzero value as "1" and leave the zeros as they are, and it should be ready to check against real images.
+
+\subsection{Week 10}
+This week I finished combining the imaging and obstacle avoidance modules and began running tests of various images to make sure that the avoidance algorithm was reacting appropriately. Testing for this system will continue in spring term, as well as working on optimization as it currently takes a minute to run on a Raspberry Pi Zero which is too long for what we need. I know for certain there are a couple ways the code can be improved, there are a couple image filters being generated from testing that go unused, and a couple functions with multiple nested for loops can be merged into a single loop. I also laid the framework for the poster, as well as added information on my module to the poster. The only things still needed for the poster are a team photo, updated photos of the rover and of our image filters as well as a paragraph on Zach's imaging module.
+\par
+A change was made to how the .csv file is used, instead of taking in raw data from the picture it now only takes in 1's and 0's. This is possible due to OpenCV storing pictures using its own custom Mat data structure. My module now goes through this data structure pixel by pixel, checking the color values that are stored as type Vec3b. Since the filter makes the image black and white, its easy to store a 1 in the .csv file to correspond to a white pixel and a 0 to correspond to a black pixel. This approach made the summation in the obstacle avoidance module easier and more accurate.
+
 
 \section{Modules I Am Responsible For}
 
@@ -112,20 +124,21 @@ Currently the obstacle avoidance module has been successfully combined with the 
 	\hline
 	Positives& Deltas &Actions \\
 	\hline
-	Our group works well together. &
-	Better understand version control.&
-	Each group member will research Github and version control in general. \\
+	Our group continues to work together and communicate well. &
+	Make wiki pages on time.&
+	Send each other reminders to do the wiki pages on Friday. \\
 	
-	All software components seem possible to implement. &
-	Better implement version control &
-	Start submitting changes to Github via Pull Request instead of Pushes. \\
+	Almost all software modules have been finished. &
+	Github repo is becoming cluttered and messy &
+	Reorganize repo to make docs easier to find, remove unnecessary files \\
 	
-	The Mechanical Engineering team is very organized and handles the details for the competition. &
-	Keep track of project progress better. & Use a separate application to keep track of progress, such as waffle.io.  \\
+	We shouldn't have much work to do during spring term &
+	Haven't tested code on hardware yet & Communicate with ECE team to find out when it will be ready.  \\
 	\hline
 \end{tabular}
-
-\section{Summary of Winter Term Progress}
+\vspace{1cm}
+\par
+We had a very successful term for implementation of our project. I believe Zach is still working on developing  machine learning for the finding the end cone module. Other than that the rest of the software modules are either in a fine tuning and testing stage or are waiting for the ECE team to finish the hardware drivers so that we can begin running tests on the hardware to ensure everything works properly. I am happy with what we as a team have produced for this end of winter term beta release.
 
 \section{Team Review}
 

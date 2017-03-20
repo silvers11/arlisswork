@@ -1,17 +1,19 @@
 \contentsline {section}{\numberline {I}Introduction}{2}{section.1}
-\contentsline {section}{\numberline {II}Summary of Winter Term}{2}{section.2}
-\contentsline {subsection}{\relax Steven Silvers}{2}{section*.2}
-\contentsline {subsection}{\relax Week 1}{2}{section*.3}
-\contentsline {subsection}{\relax Week 2}{2}{section*.4}
-\contentsline {subsection}{\relax Week 3}{2}{section*.5}
-\contentsline {subsection}{\relax Week 4}{3}{section*.6}
-\contentsline {subsection}{\relax Week 5}{3}{section*.7}
-\contentsline {subsection}{\relax Week 6}{3}{section*.8}
-\contentsline {section}{\numberline {III}Modules I Am Responsible For}{3}{section.3}
-\contentsline {subsection}{\relax Control Board}{3}{section*.9}
-\contentsline {subsection}{\relax Wheel System}{4}{section*.11}
-\contentsline {subsection}{\relax Obstacle Avoidance}{4}{section*.13}
-\contentsline {section}{\numberline {IV}A Reflection of Development Period}{6}{section.4}
-\contentsline {section}{\numberline {V}Summary of Winter Term Progress}{6}{section.5}
-\contentsline {section}{\numberline {VI}Team Review}{6}{section.6}
-\contentsline {section}{\numberline {VII}Conclusion}{6}{section.7}
+\contentsline {section}{\numberline {II}Weekly Summary of Winter Term}{2}{section.2}
+\contentsline {subsection}{\relax Week 1}{2}{section*.2}
+\contentsline {subsection}{\relax Week 2}{2}{section*.3}
+\contentsline {subsection}{\relax Week 3}{2}{section*.4}
+\contentsline {subsection}{\relax Week 4}{2}{section*.5}
+\contentsline {subsection}{\relax Week 5}{3}{section*.6}
+\contentsline {subsection}{\relax Week 6}{3}{section*.7}
+\contentsline {subsection}{\relax Week 7}{3}{section*.8}
+\contentsline {subsection}{\relax Week 8}{3}{section*.9}
+\contentsline {subsection}{\relax Week 9}{3}{section*.10}
+\contentsline {subsection}{\relax Week 10}{4}{section*.11}
+\contentsline {section}{\numberline {III}Modules I Am Responsible For}{4}{section.3}
+\contentsline {subsection}{\relax Control Board}{4}{section*.12}
+\contentsline {subsection}{\relax Wheel System}{5}{section*.14}
+\contentsline {subsection}{\relax Obstacle Avoidance}{5}{section*.16}
+\contentsline {section}{\numberline {IV}A Reflection of Development Period}{7}{section.4}
+\contentsline {section}{\numberline {V}Team Review}{7}{section.5}
+\contentsline {section}{\numberline {VI}Conclusion}{7}{section.6}
