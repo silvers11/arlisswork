@@ -3,12 +3,12 @@
 \contentsline {subsection}{\relax Week 1}{2}{section*.2}
 \contentsline {subsection}{\relax Week 2}{2}{section*.3}
 \contentsline {subsection}{\relax Week 3}{2}{section*.4}
-\contentsline {subsection}{\relax Week 4}{2}{section*.5}
+\contentsline {subsection}{\relax Week 4}{3}{section*.5}
 \contentsline {subsection}{\relax Week 5}{3}{section*.6}
 \contentsline {subsection}{\relax Week 6}{3}{section*.7}
 \contentsline {subsection}{\relax Week 7}{3}{section*.8}
 \contentsline {subsection}{\relax Week 8}{3}{section*.9}
-\contentsline {subsection}{\relax Week 9}{3}{section*.10}
+\contentsline {subsection}{\relax Week 9}{4}{section*.10}
 \contentsline {subsection}{\relax Week 10}{4}{section*.11}
 \contentsline {section}{\numberline {III}Modules I Am Responsible For}{4}{section.3}
 \contentsline {subsection}{\relax Control Board}{4}{section*.12}

@@ -24,21 +24,28 @@
 }
 
 \begin{document}
-\begin{titlepage}
-	\title{The ARLISS Project\\Progress Report\\Senior Capstone}
-	\author{Steven Silvers\\
-		Capstone Group 27\\Winter Term}
-	\date{\today}
-	\maketitle
-	\vspace{4cm}
-	\begin{abstract}
-		\noindent This document details Steven's experience working on the ARLISS Project during the winter term of 2017. This includes progress made, problems encountered and plans to address those problems as well as plans for future development of the project.
-	\end{abstract}
+%\begin{titlepage}
+%	\title{The ARLISS Project\\Progress Report\\Senior Capstone}
+%	\author{Steven Silvers\\
+%		Capstone Group 27\\Winter Term}
+%	\date{\today}
+%	\maketitle
+%	\vspace{4cm}
+%	\begin{abstract}
+%		\noindent This document details Steven's experience working on the ARLISS Project during the winter term of 2017. This includes progress made, problems encountered and plans to address those problems as well as plans for future development of the project.
+%	\end{abstract}
 
-\end{titlepage}
+%\end{titlepage}
+%\tableofcontents
+%\clearpage
+
+\title{The ARLISS Project\\Progress Report\\Senior Capstone}
+\author{Steven Silvers\\
+	Capstone Group 27\\Winter Term}
+\date{\today}
+\maketitle
+\vspace{1cm}
 \tableofcontents
-\clearpage
-
 \section{Introduction}
 \par
 This document covers the progress made by our team on the ARLISS Project over the course of winter term. The goal of this project is to work with a team of mechanical engineers and a team of electrical engineers to design and build a miniature rover that will be Oregon State University's entry into the annual ARLISS competition held in September. As part of the competition, the rover must be able to be deployed from a rocket at 10,000 feet AGL, land safely on the ground, unpack from any holding canister, lock on and autonomously drive to a finish destination at a set of provided GPS coordinates. Along the way the rover may encounter various obstacles that it will need to identify and avoid such as rocks or tire ruts.
@@ -88,7 +95,7 @@ A change was made to how the .csv file is used, instead of taking in raw data fr
 \subsection{Control Board}
 Progress for the control board module so far consists of coming together with the ECE and ME teams and selecting what board we would like to use for the project. At our first all group meeting we decided that a Raspberry Pi Zero would be the best fit for our project given the size constraints and the processing power needed by our imaging system. Once that decision was made, it was a matter of placing the order for the Pi Zero boards and updating the technology review and the design document to reflect the decision to use the Pi Zero.
 \par
-The Pi boards arrived shortly after the alpha version was turned in, the ECE team took two to work on building the electronics systems for the rovers while the CS team took one for testing our modules with. Paul held on to the board as he took up the task of doing most of the initial testing on it as well as installing Opencv and the Pi camera. At this point we are waiting on the ECE team to finish installing various sensors on the boards so that we can do testing with live data instead of just random testing with simulated values. We ran into a couple problems with the boards, namely we broke a camera port on one while trying to install the Pi camera. This problem was fixed by ordering a replacement board which arrived within the week. Another problem is that during weeks 9 and 10 the ECE group stopped communicating with either the CS or ME groups about progress and also stopped attending scheduled meetings and build days. This kept us in the dark about the progress of the hardware install on the ECE team Pi boards for multiple weeks, and we eventually ended up getting in contact with our client Dr. Squires about the problem, who was able to reach one ECE group member.
+The Pi boards arrived shortly after the alpha version was turned in, the ECE team took two to work on building the electronics systems for the rovers while the CS team took one for testing our modules with. Paul held on to the board as he took up the task of doing most of the initial testing on it as well as installing Opencv and the Pi camera. At this point we are waiting on the ECE team to finish installing various sensors on the boards so that we can do testing with live data instead of just random testing with simulated values. We ran into a couple problems with the boards, namely we broke a camera port on one while trying to install the Pi camera. This problem was fixed by ordering a replacement board which arrived within the week. Another problem is that during weeks 9 and 10 the ECE group stopped communicating with either the CS or ME groups about progress and also stopped attending scheduled meetings and build days. This kept us in the dark about the progress of the hardware install by the ECE team on the Pi boards for multiple weeks, and we eventually ended up getting in contact with our client Dr. Squires about the problem, who was able to reach one ECE group member.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale = .4]{Capture.PNG}
@@ -121,7 +128,7 @@ The original obstacle avoidance algorithm would splits the array into three larg
 	\label{fig:beta}
 \end{figure}
 \par
-Currently the obstacle avoidance module has been successfully combined with the imaging module and ran on the Raspberry Pi Zero. This means it currently can take a hard-coded image file, filter the image using OpenCV, determined which of the three sections of the image has the fewest object images and then turn that direction. As seen in figure \ref{fig:beta}, the program takes in the photo of the forest road, puts it through a filter to fined the edges and then gives an output stating which direction should be traveled, in this case it said to continue straight down the road. One major problem came up while testing on the Raspberry Pi, which is it would take almost a minute for this module to go from a picture to giving a direction. We want this time to be much lower, and we plan to lower this time with a few optimizations. First we will use a lower resolution image in the implementation, the current test images are 1080p which is much more detail than we need. We will then strip out a few filters that were only used during testing but don't actually contribute to the implementation. If further optimization is needed, there are multiple nested loops that perform somewhat redundant tasks that could potentially merged into a single nested loop. Apart from fixing these problems, the plan is to switch the module over to take in images from the Pi camera instead of hard-coded file names, and to adjust testing constants to adjust with the new file dimensions as they come in from the camera.
+Currently the obstacle avoidance module has been successfully combined with the imaging module and ran on the Raspberry Pi Zero. This means it currently can take a hard-coded image file, filter the image using OpenCV, determine which of the three sections of the image has the fewest edges and then turn that direction. As seen in figure \ref{fig:beta}, the program takes in the photo of the forest road, puts it through a filter to find the edges and then gives an output stating which direction should be traveled, in this case it said to continue straight down the road. One major problem came up while testing on the Raspberry Pi, which is it would take almost a minute for this module to go from a picture to giving a direction. We want this time to be much lower, and we plan to lower this time with a few optimizations. First we will use a lower resolution image in the implementation, the current test images are 1080p which is much more detail than we need. We will then strip out a few filters that were only used during testing but don't actually contribute to the implementation. If further optimization is needed, there are multiple nested loops that perform somewhat redundant tasks that could potentially merged into a single nested loop. Apart from fixing these problems, the plan is to switch the module over to take in images from the Pi camera instead of hard-coded file names, and to adjust testing constants to adjust with the new file dimensions as they come in from the camera.
 
 \section{A Reflection of Development Period}
 \begin{tabular}{ |p{0.3\linewidth}|p{0.3\linewidth}|p{0.3\linewidth}|  }
@@ -142,6 +149,7 @@ Currently the obstacle avoidance module has been successfully combined with the 
 	Haven't tested code on hardware yet & Communicate with ECE team to find out when it will be ready.  \\
 	\hline
 \end{tabular}
+
 \vspace{1cm}
 \par
 We had a very successful term for implementation of our project. I believe Zach is still working on developing  machine learning for the finding the end cone module. Other than that the rest of the software modules are either in a fine tuning and testing stage or are waiting for the ECE team to finish the hardware drivers so that we can begin running tests on the hardware to ensure everything works properly. I am happy with what we as a team have produced for this end of winter term beta release.
@@ -157,10 +165,10 @@ Zach worked a lot this term on developing a machine learning system for our rove
 \subsection{Steven Silvers}
 Apart from completing my modules on time as well as one of Zach's, I also took on editing our video presentations, setting up a web space for our project submissions and setting up our Expo poster so that our group can add information easily. As mentioned previously, I shared the management role with Paul, communicating with other teams in our group quickly and making sure our group is in a position to turn in our reports and presentations on time. Due to finishing other group members modules and setting up and managing the non-coding assignments I would rate my contribution at average to slightly above average.
 \subsection{Team as a Whole}
-I would say we work quite well as a development team, we have our hiccups here and there but overall we get our work done, communicate well and make all of our deadlines. Compared to how I've seen other groups interact in the capstone lab, we are doing very well working together and I'm very happy with my group.
+I would say we work quite well as a development team, we have our hiccups here and there but overall we get our work done, communicate well and make all of our deadlines. Compared to how I've seen other groups interact in the capstone lab, we are doing very well working together and I'm very happy with our group.
 
 \section{Conclusion}
-
+I would rate this term overall as a success for our development team, We are in position to finish our project early spring term without having to scramble to finish in time for expo. The only step that remains is to implement our code on the rover hardware, which we are ready to start doing as soon as the ECE team has the hardware finished an installed in the rover. There is potential for problems to arise spring term, mostly that we aren't entirely sure what the finished hardware implementation will look like or how our code will need to be adapted to work with it, but I believe that we should be able to overcome any unforeseen obstacles that we come across.
 \clearpage
 
 \pagenumbering{gobble}
